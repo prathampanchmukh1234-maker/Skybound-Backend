@@ -3,10 +3,14 @@ import * as paymentController from '../controllers/paymentController.js';
 import * as lifeCalendarController from '../controllers/lifeCalendarController.js';
 import * as bookingController from '../controllers/bookingController.js';
 import * as tripPlanController from '../controllers/tripPlanController.js';
+import * as aiController from '../controllers/aiController.js';
 import * as userController from '../controllers/userController.js';
 import { requireAuth } from '../middlewares/auth.js';
 
 const router = Router();
+
+// AI Routes
+router.post('/ai/chat', aiController.getChatReply);
 
 // Payment Routes
 router.post('/payment/create-order', requireAuth, paymentController.createOrder);
