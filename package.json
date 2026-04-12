@@ -8,6 +8,7 @@
     "dev": "tsx server.ts"
   },
   "dependencies": {
+    "@google/genai": "^1.49.0",
     "@supabase/supabase-js": "^2.45.0",
     "cors": "^2.8.6",
     "express": "^5.2.1",
